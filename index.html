@@ -1,0 +1,1026 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>SpaceX</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta name="theme-color" content="#000000" />
+    <meta
+      name="description"
+      content="Interactive 3D Experience about interplanetary travel with SpaceX Starship and Super Heavy. Made with Peach Worlds."
+    />
+    <meta
+      property="og:title"
+      content="SpaceX"
+    />
+    <meta
+      property="og:description"
+      content="Interactive 3D Experience about interplanetary travel with SpaceX Starship and Super Heavy. Made with Peach Worlds."
+    />
+    <meta property="og:image" content="/meta-spacex.webp" />
+    <meta property="og:url" content="https://missionmars.peachworlds.com/" />
+    <meta property="og:type" content="website" />
+    <link href="/website-base.css" rel="stylesheet" />
+    <link rel="icon" href="/logo.png" />
+    <link rel="apple-touch-icon" href="/logo.png" />
+    <link rel="manifest" href="/manifest.json" />
+    <link href="/styles.css" rel="stylesheet" />
+
+    <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin="" />
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Inter:100,200,300,400,500,600,700,800,900&display=swap"
+      rel="stylesheet"
+    />
+
+    <script>
+      window._pwInitialPath = "/";
+    </script>
+    <script defer="defer" src="/script.js"></script>
+
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        margin: 0;
+      }
+      * {
+        scrollbar-width: none;
+      }
+      ::-webkit-scrollbar {
+        display: none;
+      }
+      .pwb-scene > canvas {
+        width: 100%;
+        height: 100%;
+        display: block;
+        user-select: none;
+        pointer-events: none;
+      }
+      #pwb-loading-wrap {
+        background-color: #040404;
+      }
+      #ikjs {
+        top: 0px;
+        width: 100%;
+        height: 100dvh;
+        display: flex;
+        position: fixed; 
+        align-items: center;
+        flex-direction: column;
+        justify-content: center;
+        background-color: #040404;
+      }
+      #izsy {
+        right: 0px;
+        bottom: 0px;
+        display: block;
+        position: absolute;
+      }
+      #iek57 {
+        top: px;
+        display: none;
+        position: static;
+        align-items: center;
+        justify-content: center;
+      }
+      #i535h {
+        color: #ffffff;
+        display: block;
+        position: absolute;
+        font-size: 18px;
+        text-align: center;
+        font-family: "orbitron-bold";
+        font-weight: bold;
+      }
+      #iq2vpi {
+        color: #ffffff;
+        display: block;
+        font-size: 24px;
+        text-align: center;
+        font-family: "orbitron-regular";
+        font-weight: 400;
+        line-height: 24px;
+        letter-spacing: 0px;
+      }
+      #iq2vpi-2 {
+        color: #ffffff;
+        display: block;
+        font-size: 15px;
+        text-align: center;
+        font-family: "orbitron-regular";
+        font-weight: 400;
+        line-height: 24px;
+        letter-spacing: 1px;
+      }
+      #idzl4r {
+        gap: 8px;
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+      }
+      #itis5k {
+        bottom: 16px;
+        height: 38px;
+        position: fixed;
+      }
+      #iq2vpi-2-2 {
+        color: #ffffff;
+        display: block;
+        font-size: 12px;
+        text-align: center;
+        font-family: "orbitron-regular";
+        font-weight: 400;
+        line-height: 24px;
+        letter-spacing: 1px;
+      }
+      #i9a0wo {
+        gap: 8px;
+        bottom: 12dvh;
+        display: flex;
+        position: fixed;
+        align-items: center;
+        flex-direction: column;
+        justify-content: start;
+      }
+      #iu20ed {
+        height: 20px;
+        display: block;
+        opacity: 1;
+      }
+      @font-face {
+        src: url("https://files.staging.peachworlds.com/website/faa4e72a-b80a-4d86-a108-8e7142acc47f/orbitron-regular.ttf");
+        font-family: orbitron-regular;
+      }
+      @font-face {
+        src: url("https://files.staging.peachworlds.com/website/dcd92955-26ce-4a80-aebc-f9fa226ea164/orbitron-bold.ttf");
+        font-family: orbitron-bold;
+      }
+      @font-face {
+        src: url("https://files.staging.peachworlds.com/website/805ca673-ea6e-472c-80da-e8108dd30719/d-dincondensed.ttf");
+        font-family: d-dincondensed;
+      }
+      @font-face {
+        src: url("https://files.staging.peachworlds.com/website/f3ff7e62-7e6f-4cc3-b090-070a6e4da1de/d-din-bold.ttf");
+        font-family: d-din-bold;
+      }
+      @font-face {
+        src: url("https://files.staging.peachworlds.com/website/b7cc38a6-d588-497c-9467-98efdbe53945/d-dincondensed-bold.ttf");
+        font-family: d-dincondensed-bold;
+      }
+      @media (max-width: 992px) {
+        #iq2vpi-2 {
+          color: #ffffff;
+          display: block;
+          font-size: 16px;
+          text-align: center;
+          font-family: "orbitron-regular";
+          font-weight: 400;
+          line-height: 24px;
+          letter-spacing: 0px;
+        }
+        #iq2vpi-2-2 {
+          color: #ffffff;
+          display: block;
+          font-size: 13px;
+          text-align: center;
+          font-family: "orbitron-regular";
+          font-weight: 400;
+          line-height: 24px;
+          letter-spacing: 0px;
+        }
+      }
+      @media (max-width: 480px) {
+        #iq2vpi-2 {
+          color: #ffffff;
+          display: block;
+          font-size: 13px;
+          text-align: center;
+          font-family: "orbitron-regular";
+          font-weight: 400;
+          line-height: 14px;
+          letter-spacing: 0px;
+        }
+        #iq2vpi-2-2 {
+          color: #ffffff;
+          display: block;
+          font-size: 13px;
+          text-align: center;
+          font-family: "orbitron-regular";
+          font-weight: 400;
+          line-height: 14px;
+          letter-spacing: 0px;
+        }
+        #idzl4r {
+          width: 95%;
+          z-index: 1;
+          position: relative;
+          align-items: center;
+        }
+        #itis5k {
+          height: 32px;
+        }
+        #iq2vpi {
+          max-width: 300px;
+        }
+        #iu20ed {
+          height: 15px;
+        }
+        #izsy {
+          right: 0px;
+          bottom: 0px;
+          display: block;
+          z-index: 0;
+          position: fixed;
+        }
+      }
+    </style>
+  </head>
+  <body
+    id="i9of"
+    data-scroll-type="smooth"
+    data-scroll-easing="easeOutQuart"
+    data-scroll-duration="1400"
+  >
+    <div id="pwb-body-wrap">
+      <div id="in24" class="pwb-background pwb-flex-grid-wrap">
+        <div id="imaj" class="pwb-scene"></div>
+      </div>
+      <div id="igwjo" class="pwb-flex-grid-wrap">
+        <div id="iyuyew" class="pwb-flex-grid-wrap"></div>
+        <div id="igwjo-2-2" class="pwb-flex-grid-wrap"></div>
+        <div id="igwjo-2-2-2" class="pwb-flex-grid-wrap"></div>
+        <div id="i7d75r" class="pwb-flex-grid-wrap">
+          <div id="iq5a36" class="pwb-flex-grid-wrap">
+            <div id="ixi3wg" class="pwb-flex-grid-wrap">
+              <div id="isjyr4" class="pwb-flex-grid-wrap">
+                <img
+                  src="https://files.staging.peachworlds.com/website/28150b45-2851-430b-b649-1572f816feea/left-corner.svg"
+                  id="i9r12a"
+                /><img
+                  src="https://files.staging.peachworlds.com/website/c0b20cee-7065-4175-a45b-06d3910c7356/right-corner.svg"
+                  id="iidrq3"
+                />
+              </div>
+              <div id="i9j9b1">
+                'MAKING HUMANITY MULTIPLANETARY. carrying humans to Mars and
+                other destinations in the solar system.' <br id="i033my" /><span
+                  id="igq3lg"
+                  >—SPACEX</span
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+        <div id="iv4epl" class="pwb-flex-grid-wrap"></div>
+        <div id="i9ukr8" class="pwb-flex-grid-wrap"></div>
+        <div id="i86poi" class="pwb-flex-grid-wrap"></div>
+        <div id="ihd0q9" class="pwb-flex-grid-wrap"></div>
+        <div id="iqvgp5" class="pwb-flex-grid-wrap"></div>
+        <div id="i4yrui" class="pwb-flex-grid-wrap"></div>
+        <div id="i4yrui-2" class="pwb-flex-grid-wrap"></div>
+        <div id="iqvgp5-2" class="pwb-flex-grid-wrap"></div>
+        <div id="iqvgp5-2-2" class="pwb-flex-grid-wrap"></div>
+        <div id="iqvgp5-2-2-2" class="pwb-flex-grid-wrap"></div>
+        <div id="iwgzof" class="pwb-flex-grid-wrap"></div>
+        <div id="irqbh2" class="pwb-flex-grid-wrap"></div>
+      </div>
+      <div id="iukcp" class="pwb-flex-grid-wrap">
+        <div id="iukcp-2" class="pwb-flex-grid-wrap">
+          <div id="ijipl" class="pwb-flex-grid-wrap">
+            <div id="ilh6h" class="pwb-flex-grid-wrap">
+              <img
+                src="https://files.staging.peachworlds.com/website/28150b45-2851-430b-b649-1572f816feea/left-corner.svg"
+                id="i9w4h"
+              /><img
+                src="https://files.staging.peachworlds.com/website/c0b20cee-7065-4175-a45b-06d3910c7356/right-corner.svg"
+                id="i9tsl"
+              />
+            </div>
+            <div id="ix55h">MISSION:</div>
+          </div>
+          <div id="ilvrh">MARS</div>
+          <div id="iv6qwc" class="pwb-flex-grid-wrap">
+            <div id="iqtbrc">INTERACTIVE STORY OF</div>
+            <img
+              src="https://files.staging.peachworlds.com/website/9adda8b4-2097-48fc-8ec1-f9e2beb693d7/spacex.svg"
+              id="iqe84"
+            />
+          </div>
+          <div id="ilvrh-2">
+            At a distance of 140 million miles, Mars is one of Earth's closest
+            habitable neighbors. One ballsy company wants to put a man on Mars!
+          </div>
+          <div style="display: flex; flex-direction: row; gap: 10px;">
+            <a href="https://app.uniswap.org/#/swap?inputCurrency=eth&outputCurrency=0xcomingsoon" target="_blank" id="i9npw-3" data-has-states="1" style="text-decoration: none;" class="pwb-flex-grid-wrap">
+              <div id="iduef">BUY $SPACEX</div>
+            </a>
+            <div id="i9npw-3" data-has-states="1" class="pwb-flex-grid-wrap">
+              <div id="iduef">INITIATE AUDIO</div>
+            </div>
+          </div>
+        </div>
+        <div id="ixnzk" class="pwb-flex-grid-wrap">
+          <div id="iq4u9">Scroll to Engage </div>
+        </div>
+        <div id="i170g" class="pwb-flex-grid-wrap">
+          <div id="itthiv" class="pwb-flex-grid-wrap">
+            <div id="ifsey" class="pwb-flex-grid-wrap"></div>
+            <div id="ixnzk-2" class="pwb-flex-grid-wrap">
+              <div id="iq4u9-2">6</div>
+              <div id="igku3">MONTHS TO MARS</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="iy3r1" class="pwb-flex-grid-wrap">
+        <div id="iiert" class="pwb-flex-grid-wrap">
+          <div id="id9de" class="pwb-flex-grid-wrap">
+            <div id="iy769" class="pwb-flex-grid-wrap">
+              <img
+                src="https://files.staging.peachworlds.com/website/28150b45-2851-430b-b649-1572f816feea/left-corner.svg"
+                id="ic0gu"
+              /><img
+                src="https://files.staging.peachworlds.com/website/c0b20cee-7065-4175-a45b-06d3910c7356/right-corner.svg"
+                id="i6sho"
+              />
+            </div>
+            <div id="iztqh">
+              As the most powerful launch system ever developed, Starship can
+              carry up to 100 people on long-duration, interplanetary flights.
+              Starship also helps with satellite delivery, the development of a
+              Moon base, and point-to-point transport here on Earth.<br
+                id="i47ug"
+              />
+            </div>
+          </div>
+        </div>
+        <div id="ihoxu" class="pwb-flex-grid-wrap">
+          <div id="i2n74g" class="pwb-flex-grid-wrap">
+            <div id="imou2" class="pwb-flex-grid-wrap"></div>
+            <div id="ixbqq" class="pwb-flex-grid-wrap">
+              <div id="i51qj">TO MARS<br id="idyps" />AND BACK</div>
+              <div id="iy0vk">INTERPLANETARY TRANSPORT</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="iwcuc" class="pwb-flex-grid-wrap">
+        <div id="ipdpd" class="pwb-flex-grid-wrap">
+          <div id="ixcdj" class="pwb-flex-grid-wrap">
+            <div id="i6i6a" class="pwb-flex-grid-wrap">
+              <img
+                src="https://files.staging.peachworlds.com/website/28150b45-2851-430b-b649-1572f816feea/left-corner.svg"
+                id="ijzxy"
+              /><img
+                src="https://files.staging.peachworlds.com/website/c0b20cee-7065-4175-a45b-06d3910c7356/right-corner.svg"
+                id="i8sdr"
+              />
+            </div>
+            <div id="io6rp">STARSHIP</div>
+          </div>
+          <div id="ijpsu">REUSABLE SPACECRAFT</div>
+          <div id="i2lig">
+            The vehicle comes in several different configurations, offers an
+            integrated payload section and is capable of carrying crew and cargo
+            to Earth orbit, the Moon, Mars and beyond. Starship is also capable
+            of point-to-point transport on Earth, enabling travel to anywhere in
+            the world in one hour or less.
+          </div>
+          <div id="i89ek" class="pwb-flex-grid-wrap">
+            <div id="i89ek-2" class="pwb-flex-grid-wrap">
+              <div id="ii1u2">Height</div>
+              <div id="ilv6w">50 m <span id="ie2z9">/ 165 ft</span></div>
+            </div>
+            <div id="i89ek-2-2" class="pwb-flex-grid-wrap"></div>
+            <div id="ij0wbw" class="pwb-flex-grid-wrap">
+              <div id="ifj8h">DIAMETER</div>
+              <div id="io69zo">9 m <span id="iso686">/ 29.5 ft</span></div>
+            </div>
+            <div id="ijrrq1" class="pwb-flex-grid-wrap"></div>
+            <div id="i2ypgl" class="pwb-flex-grid-wrap">
+              <div id="ifwswd">PROPELLANT</div>
+              <div id="iu9wjy">1,200 t <span id="iqj1uj">/ 2.6 Mlb</span></div>
+            </div>
+            <div id="i0js5o" class="pwb-flex-grid-wrap"></div>
+            <div id="iu3dfl" class="pwb-flex-grid-wrap">
+              <div id="ibrigf">THRUST</div>
+              <div id="iq8zmm">
+                1,500 tf <span id="iyv1dh">/ 3.3 Mlbf</span>
+              </div>
+            </div>
+            <div id="i1z7hh" class="pwb-flex-grid-wrap"></div>
+            <div id="irmgh5" class="pwb-flex-grid-wrap">
+              <div id="im67sc">PAYLOAD</div>
+              <div id="iyumhb">100–150 t</div>
+            </div>
+            <div id="imfpnm" class="pwb-flex-grid-wrap"></div>
+          </div>
+        </div>
+      </div>
+      <div id="iddy9b" class="pwb-flex-grid-wrap">
+        <div id="ic5ufi" class="pwb-flex-grid-wrap">
+          <div id="ierhfi" class="pwb-flex-grid-wrap">
+            <div id="id31oi" class="pwb-flex-grid-wrap">
+              <img
+                src="https://files.staging.peachworlds.com/website/28150b45-2851-430b-b649-1572f816feea/left-corner.svg"
+                id="i4v1nw"
+              /><img
+                src="https://files.staging.peachworlds.com/website/c0b20cee-7065-4175-a45b-06d3910c7356/right-corner.svg"
+                id="itu5id"
+              />
+            </div>
+            <div id="ikqk8j">SUPER HEAVY</div>
+          </div>
+          <div id="i1ctla">REUSABLE BOOSTER</div>
+          <div id="ici59z">
+            Super Heavy is the first stage, or booster, of the Starship launch
+            system. Powered by 33 Raptor engines using sub-cooled liquid methane
+            (CH4) and liquid oxygen (LOX), Super Heavy is fully reusable and
+            will re-enter Earth’s atmosphere to land back at the launch site.<br
+              id="i67gt5"
+            />
+          </div>
+          <div id="isgi54" class="pwb-flex-grid-wrap">
+            <div id="i8vtp6" class="pwb-flex-grid-wrap">
+              <div id="i4nsej">Height</div>
+              <div id="iy3uax">71 m <span id="ifg7rl">/ 232 ft</span></div>
+            </div>
+            <div id="ienrxu" class="pwb-flex-grid-wrap"></div>
+            <div id="i0zgcf" class="pwb-flex-grid-wrap">
+              <div id="ikrl69">DIAMETER</div>
+              <div id="ix188i">9 m <span id="ifzpum">/ 29.5 ft</span></div>
+            </div>
+            <div id="irk8qw" class="pwb-flex-grid-wrap"></div>
+            <div id="iicqoe" class="pwb-flex-grid-wrap">
+              <div id="ir7n1k">PROPELLANT</div>
+              <div id="itu0jf">
+                3400 t <span id="ifzpum-4" draggable="true">/ 7.5 Mlb</span>
+              </div>
+            </div>
+            <div id="i0ixvo" class="pwb-flex-grid-wrap"></div>
+            <div id="iicqoe-2" class="pwb-flex-grid-wrap">
+              <div id="ir7n1k-2">THRUST</div>
+              <div id="itu0jf-2">
+                7,590 tf <span id="ifzpum-2" draggable="true">/ 16.7 Mlbf</span>
+              </div>
+            </div>
+            <div id="i0ixvo-2" class="pwb-flex-grid-wrap"></div>
+          </div>
+        </div>
+      </div>
+      <div id="iktmyi" class="pwb-flex-grid-wrap">
+        <div id="itfsmh" class="pwb-flex-grid-wrap">
+          <div id="i67x2r" class="pwb-flex-grid-wrap"></div>
+          <div id="i7ekzw" class="pwb-flex-grid-wrap">
+            <div id="ityn8s">159s</div>
+            <div id="iyf1pl">BURN TIME</div>
+          </div>
+        </div>
+        <div id="ihuxg9" class="pwb-flex-grid-wrap">
+          <div id="itxtlu" class="pwb-flex-grid-wrap"></div>
+          <div id="i9rcry" class="pwb-flex-grid-wrap">
+            <div id="i445tx">33</div>
+            <div id="ijka45">RAPTOR ENGINES</div>
+          </div>
+        </div>
+      </div>
+      <div id="iorqun" class="pwb-flex-grid-wrap">
+        <div id="iz6n5g" class="pwb-flex-grid-wrap">
+          <div id="izb4g5" class="pwb-flex-grid-wrap">
+            <div id="i6rrau" class="pwb-flex-grid-wrap">
+              <img
+                src="https://files.staging.peachworlds.com/website/28150b45-2851-430b-b649-1572f816feea/left-corner.svg"
+                id="i97d3p"
+              /><img
+                src="https://files.staging.peachworlds.com/website/c0b20cee-7065-4175-a45b-06d3910c7356/right-corner.svg"
+                id="i5gib3"
+              />
+            </div>
+            <div id="i2c0np">RAPTOR 3</div>
+          </div>
+          <div id="i1myo3">ROCKET ENGINE</div>
+          <div id="i5xb17">
+            The Raptor engine is a reusable methane-oxygen staged-combustion
+            engine. Starship is powered by 6 engines while Super Heavy has 33
+            Raptor engines.<br id="i8hkud" /><br id="ix2p5j" />
+          </div>
+          <div id="ilu61a">
+            The Raptor engine is a reusable methane-oxygen staged-combustion
+            engine. <br id="i0a22q" /><br id="ip6nvf" />
+          </div>
+          <div id="in710s" class="pwb-flex-grid-wrap">
+            <div id="ip64nh" class="pwb-flex-grid-wrap">
+              <div id="iqnsej" class="pwb-flex-grid-wrap">
+                <div id="i95r4u">Height</div>
+                <div id="ixr7l5">3.1 m <span id="ibhuhm">/ 10.2 ft</span></div>
+              </div>
+              <div id="iuijlk" class="pwb-flex-grid-wrap"></div>
+              <div id="ia4y3k" class="pwb-flex-grid-wrap">
+                <div id="izg3qk">DIAMETER</div>
+                <div id="i5c0eh">1.3 m <span id="idr3bl">/ 4.2 ft</span></div>
+              </div>
+              <div id="ipsklj" class="pwb-flex-grid-wrap"></div>
+            </div>
+            <div id="ip64nh-2" class="pwb-flex-grid-wrap">
+              <div id="ia4y3k-2" class="pwb-flex-grid-wrap">
+                <div id="izg3qk-2">MASS</div>
+                <div id="i5c0eh-2">
+                  1,525 kg <span id="idr3bl-2">/ 3.362 lbs</span>
+                </div>
+              </div>
+              <div id="iw6kxr" class="pwb-flex-grid-wrap"></div>
+              <div id="iv3jdr" class="pwb-flex-grid-wrap">
+                <div id="iymoy8">THRUST</div>
+                <div id="i2lmhn">
+                  280 tf <span id="igrfiz" draggable="true">/ 627 klbf</span>
+                </div>
+              </div>
+              <div id="imcxm4" class="pwb-flex-grid-wrap"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="i6hvl7" class="pwb-flex-grid-wrap">
+        <div id="iiiukl" class="pwb-flex-grid-wrap">
+          <div id="ixp2ol" class="pwb-flex-grid-wrap">
+            <div id="ir94ok" class="pwb-flex-grid-wrap">
+              <img
+                src="https://files.staging.peachworlds.com/website/28150b45-2851-430b-b649-1572f816feea/left-corner.svg"
+                id="im8ihn"
+              /><img
+                src="https://files.staging.peachworlds.com/website/c0b20cee-7065-4175-a45b-06d3910c7356/right-corner.svg"
+                id="ig490s"
+              />
+            </div>
+            <div id="igamue-3">BOOSTER</div>
+          </div>
+          <div id="i7d1qe">LANDING</div>
+          <div id="ifuxkf">DESCENT STAGE</div>
+          <div id="iky0m9">
+            Following Starship separation, the booster reorients itself and
+            performs a series of controlled burns using its engines to slow its
+            descent and guide it back to Starbase.<br id="iqw0ei" />
+          </div>
+        </div>
+      </div>
+      <div id="i19vou" class="pwb-flex-grid-wrap">
+        <div id="i7n2mj" class="pwb-flex-grid-wrap">
+          <div id="i10mqe" class="pwb-flex-grid-wrap">
+            <div id="im8oly" class="pwb-flex-grid-wrap">
+              <div id="ii5m33" class="pwb-flex-grid-wrap">
+                <div id="il5nh8" class="pwb-flex-grid-wrap">
+                  <img
+                    src="https://files.staging.peachworlds.com/website/28150b45-2851-430b-b649-1572f816feea/left-corner.svg"
+                    id="iefgsn"
+                  /><img
+                    src="https://files.staging.peachworlds.com/website/c0b20cee-7065-4175-a45b-06d3910c7356/right-corner.svg"
+                    id="ifg1ce"
+                  />
+                </div>
+                <div id="iyf1pl-2-2-3">PHASE 1</div>
+                <div id="izavxy">ENTRY BURN</div>
+              </div>
+              <div id="iwr0z6">
+                Engines light to SLOW DOWN THE BOOSTER DECENT STAGE
+              </div>
+            </div>
+          </div>
+          <div id="i10mqe-2" class="pwb-flex-grid-wrap">
+            <div id="im8oly-2" class="pwb-flex-grid-wrap">
+              <div id="ii5m33-2" class="pwb-flex-grid-wrap">
+                <div id="il5nh8-2" class="pwb-flex-grid-wrap">
+                  <img
+                    src="https://files.staging.peachworlds.com/website/28150b45-2851-430b-b649-1572f816feea/left-corner.svg"
+                    id="iefgsn-2"
+                  /><img
+                    src="https://files.staging.peachworlds.com/website/c0b20cee-7065-4175-a45b-06d3910c7356/right-corner.svg"
+                    id="ifg1ce-2"
+                  />
+                </div>
+                <div id="iyf1pl-2-2-2">PHASE 2</div>
+                <div id="izavxy-2">GRID FINS</div>
+              </div>
+              <div id="iwr0z6-2">DIRECT BOOSTER TOWARDS LANDING POD</div>
+            </div>
+          </div>
+          <div id="i10mqe-2-2" class="pwb-flex-grid-wrap">
+            <div id="im8oly-2-2" class="pwb-flex-grid-wrap">
+              <div id="ii5m33-2-2" class="pwb-flex-grid-wrap">
+                <div id="il5nh8-2-2" class="pwb-flex-grid-wrap">
+                  <img
+                    src="https://files.staging.peachworlds.com/website/28150b45-2851-430b-b649-1572f816feea/left-corner.svg"
+                    id="iefgsn-2-2"
+                  /><img
+                    src="https://files.staging.peachworlds.com/website/c0b20cee-7065-4175-a45b-06d3910c7356/right-corner.svg"
+                    id="ifg1ce-2-2"
+                  />
+                </div>
+                <div id="iyf1pl-2-2">PHASE 3</div>
+                <div id="izavxy-2-2">LANDING BURN</div>
+              </div>
+              <div id="iwr0z6-2-2">
+                Engines LIGHT ONE FINAL TIME<br id="ifezxl" />
+              </div>
+            </div>
+          </div>
+          <div id="i10mqe-2-2-2" class="pwb-flex-grid-wrap">
+            <div id="im8oly-2-2-2-2" class="pwb-flex-grid-wrap">
+              <div id="ii5m33-2-2-2-2" class="pwb-flex-grid-wrap">
+                <div id="il5nh8-2-2-2-2" class="pwb-flex-grid-wrap">
+                  <img
+                    src="https://files.staging.peachworlds.com/website/39b3dedb-41ad-40b8-bd2a-171e45a0342f/left-corner.svg"
+                    id="iefgsn-2-2-2-2"
+                  /><img
+                    src="https://files.staging.peachworlds.com/website/8e26ec9f-99a2-4098-b8cd-dcf07455df22/right-corner.svg"
+                    id="ifg1ce-2-2-2-2"
+                  />
+                </div>
+                <div id="iyf1pl-2">PHASE 4</div>
+                <div id="izavxy-2-2-2-2">CHOPSTICK<br id="iy9p95" />CATCH</div>
+              </div>
+              <div id="iwr0z6-2-2-2-2">
+                MID-AIR CATCH BY ARMS OF THE STARBASE TOWER
+              </div>
+            </div>
+          </div>
+          <div id="iikpoi" class="pwb-flex-grid-wrap">
+            <div id="ivub06" class="pwb-flex-grid-wrap">
+              <div id="ifa3id" class="pwb-flex-grid-wrap">
+                <img
+                  src="https://files.staging.peachworlds.com/website/819255fa-010f-498e-9d36-d8ccdebb0038/engine-0.svg"
+                  id="iurkfn"
+                />
+              </div>
+              <div id="iumy5f" class="pwb-flex-grid-wrap">
+                <img
+                  src="https://files.staging.peachworlds.com/website/2b606ec2-c37f-4964-8758-eede489a9281/engine-3.svg"
+                  id="iurkfn-2"
+                />
+              </div>
+              <div id="i4q4t8" class="pwb-flex-grid-wrap">
+                <img
+                  src="https://files.staging.peachworlds.com/website/b0001ccf-7b04-40cf-acb7-d094fce558e2/engine-full.svg"
+                  id="iurkfn-2-2"
+                />
+              </div>
+            </div>
+            <div id="imqljx" class="pwb-flex-grid-wrap">
+              <div id="ibk2mi" class="pwb-flex-grid-wrap">
+                <div id="inbcux">SPEED</div>
+                <div id="iu6hvw">ALTITUDE</div>
+              </div>
+              <div id="ibk2mi-2" class="pwb-flex-grid-wrap">
+                <div id="ibs5m2" class="pwb-flex-grid-wrap">
+                  <div id="inbcux-2">3800 KM/H</div>
+                  <div id="inbcux-2-2">10-20 KM</div>
+                </div>
+                <div id="ioaeno" class="pwb-flex-grid-wrap">
+                  <div id="ijegv9">2000 KM/H</div>
+                  <div id="icrbn2">5-10 KM</div>
+                </div>
+                <div id="i7k6y6" class="pwb-flex-grid-wrap">
+                  <div id="iam5y9">200 KM/H</div>
+                  <div id="i8hvvs">1-5 KM</div>
+                </div>
+                <div id="i3lxrg" class="pwb-flex-grid-wrap">
+                  <div id="ikb0k4">0 KM/H</div>
+                  <div id="i6rhw2">0KM</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div id="i3idjz" class="pwb-flex-grid-wrap">
+            <div id="iyvhvk" class="pwb-flex-grid-wrap">
+              <img
+                src="https://files.staging.peachworlds.com/website/713f8916-65df-465e-991d-e9b643cbc9df/line-0.svg"
+                id="i6icrj"
+              />
+            </div>
+            <div id="i3r8u6" class="pwb-flex-grid-wrap">
+              <img
+                src="https://files.staging.peachworlds.com/website/caad7268-8e0d-4c0d-aa8a-f630286a55a2/line-1.svg"
+                id="i6icrj-2"
+              />
+            </div>
+            <div id="i3r8u6-2" class="pwb-flex-grid-wrap">
+              <img
+                src="https://files.staging.peachworlds.com/website/691dc4f1-e7b9-4406-8aa2-48d21701f158/line-2.svg"
+                id="i6icrj-2-2"
+              />
+            </div>
+            <div id="i3r8u6-2-2" class="pwb-flex-grid-wrap">
+              <img
+                src="https://files.staging.peachworlds.com/website/b0fcee8f-d065-4884-82e2-13343a915ec4/line-3.svg"
+                id="i6icrj-2-2-2"
+              />
+            </div>
+            <div id="i3r8u6-2-2-2" class="pwb-flex-grid-wrap">
+              <img
+                src="https://files.staging.peachworlds.com/website/95e4a6cc-c69e-401e-a494-456f2d428b24/line-4.svg"
+                id="i6icrj-2-2-2-2"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="igdj8a" class="pwb-flex-grid-wrap">
+        <div id="iece2i" class="pwb-flex-grid-wrap">
+          <div id="illxnf" class="pwb-flex-grid-wrap">
+            <div id="ihku3l" class="pwb-flex-grid-wrap">
+              <div id="iej8vu" class="pwb-flex-grid-wrap">
+                <img
+                  src="https://files.staging.peachworlds.com/website/28150b45-2851-430b-b649-1572f816feea/left-corner.svg"
+                  id="iji4oo"
+                /><img
+                  src="https://files.staging.peachworlds.com/website/c0b20cee-7065-4175-a45b-06d3910c7356/right-corner.svg"
+                  id="ipwsgd"
+                />
+              </div>
+              <div id="igamue">THE MOON</div>
+            </div>
+            <div id="idce03">B<span id="i6vggz"></span>ASE</div>
+          </div>
+          <div id="igo5rw" class="pwb-flex-grid-wrap">
+            <div id="ia7tt3">
+              The Moon is one of Earth’s closest habitable neighbors and
+              provides an opportunity to gain valuable experience for missions
+              to Mars and beyond.<br id="imuks7" />
+            </div>
+            <a href="https://dexscreener.com/ethereum/0xcomingsoon" target="_blank" id="i5mhzj" data-has-states="1" class="pwb-flex-grid-wrap">
+              <div id="i5pdwj">Chart</div>
+              <img
+                src="https://files.staging.peachworlds.com/website/f29dd291-a504-4ef7-8501-b480a84258e4/right-up-1-.svg"
+                id="i2otll"
+              />
+            </a>
+          </div>
+        </div>
+        <div id="ikxkfi" class="pwb-flex-grid-wrap">
+          <div id="i9rpgg">
+            Not affiliated with or endorsed by
+            SpaceX. Trademarks and images are property of SpaceX.
+          </div>
+        </div>
+      </div>
+      <div id="im5x5" class="pwb-flex-grid-wrap">
+        <div id="i9npw-2" class="pwb-flex-grid-wrap"></div>
+        <div id="iiqeru" class="pwb-flex-grid-wrap">
+          <div id="igamue-2">SpaceX</div>
+        </div>
+        <div id="ikfwkk" class="pwb-flex-grid-wrap">
+          <div id="i8doo4" data-has-states="1" class="pwb-flex-grid-wrap">
+            <img
+              src="https://files.staging.peachworlds.com/website/adeab74c-f211-4345-af6b-fe834c789d40/twitter-7-.svg"
+              id="inv5b9"
+            />
+          </div>
+          <a id="i8doo4" data-has-states="1" class="pwb-flex-grid-wrap" href="https://t.me/MissionMarsETH" target="_blank">
+            <img
+              src="/telegram.svg"
+              id="inv5b9"
+            />
+          </a>
+          <div id="i9npw" data-has-states="1" class="pwb-flex-grid-wrap">
+            <div id="i8g04" class="pwb-audio"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="pwb-loading-wrap">
+      <body id="pwb-loading-wrap">
+        <div id="ikjs" class="pwb-flex-grid-wrap">
+          <div id="idzl4r" class="pwb-flex-grid-wrap">
+            <div id="iq2vpi">'I think Mars is a great place to go. It’s a fixer-upper of a planet, but we could make it work.'</div>
+            <div id="iq2vpi-2">— ELON MUSK, CEO OF SPACEX</div>
+          </div>
+          <img
+            src="https://files.staging.peachworlds.com/static/loading_page_gradient.png"
+            id="izsy"
+          />
+          <div id="i9a0wo" class="pwb-flex-grid-wrap">
+            <div
+              id="iek57"
+              size="40"
+              progressColor="#FFFFFF"
+              progressWidth="1"
+              backgroundColor="#38363B"
+              backgroundWidth="1"
+              class="pwb-loading-bar"
+            >
+              <svg
+                id="iwazr"
+                width="82"
+                xmlns="http://www.w3.org/2000/svg"
+                height="82"
+                version="1.1"
+                viewPort="0 0 82 82"
+              >
+                <circle
+                  r="40"
+                  cx="41"
+                  cy="41"
+                  id="ikyyc"
+                  fill="transparent"
+                  stroke="#38363B"
+                  stroke-width="1"
+                  stroke-dasharray="251.32741228718345"
+                  stroke-dashoffset="0"
+                ></circle>
+                <circle
+                  r="40"
+                  cx="41"
+                  cy="41"
+                  id="isbsp"
+                  fill="transparent"
+                  stroke="#FFFFFF"
+                  stroke-width="1"
+                  stroke-dasharray="251.32741228718345"
+                  stroke-dashoffset="251.32741228718345"
+                  class="pwb-loading-bar-circle"
+                ></circle>
+              </svg>
+              <div id="i535h" class="pwb-loading-bar-text">0%</div>
+            </div>
+            <img
+              src="https://files.staging.peachworlds.com/website/92522c15-f00a-479d-af62-9b72aa5ca276/animation-1732284436861-2-.gif"
+              id="iu20ed"
+            />
+            <div id="iq2vpi-2-2">  Loading...</div>
+          </div>
+        </div>
+      </body>
+    </div>
+
+    <!-- Waterfall optimization javascript -->
+    <script type="text/javascript">
+      window._pwPreviewResourceUrls = [];
+      window._pwResourceUrls = [
+        "https://files.staging.peachworlds.com/website/4b768123-dbe0-48a6-bcb2-365eb1d8fc47/booster-fin-c.glb",
+        "https://files.staging.peachworlds.com/website/9472051f-4768-40e9-8617-9ef3c1257c89/suit-glb-2k-v1.glb",
+        "https://files.staging.peachworlds.com/website/b7a4a4b4-62fc-4e35-a7b0-6d6b804de150/tower-2-c.glb",
+        "https://files.staging.peachworlds.com/website/5cc2e09a-6923-47c2-95b8-09ece16b8a3e/starship-new-c.glb",
+        "https://files.staging.peachworlds.com/website/4ce212ae-71fc-4fa4-9c24-b4b8eddadb74/towerarm2-c.glb",
+        "https://files.staging.peachworlds.com/website/c06a5c3b-b7d3-4c6f-bf5b-18a5382b05bf/towerarm1-c.glb",
+        "https://files.staging.peachworlds.com/website/3b6cd50d-b750-4149-bd61-90e9c4c3fceb/scene-draco-ktx2e-3072-.glb",
+        "https://files.staging.peachworlds.com/website/ec89c0b4-b385-423d-be84-49ad3b8ebe8d/cybertruck-c.glb",
+        "https://files.staging.peachworlds.com/website/8d3a7435-961d-4949-8cf4-894129cfad85/raptor-engine-c.glb",
+        "https://files.staging.peachworlds.com/website/803660cf-a47b-477a-a306-b0f71b1380aa/logo-spacex.glb",
+        "https://files.staging.peachworlds.com/website/82a38ac9-a0b3-4ff1-bcff-4001455255c8/140c7cc8-d734-483d-ac95-8a0c85d1ef20-scene-2-draco-ktx2e-4096-.glb",
+        "https://files.staging.peachworlds.com/website/c7fd83bd-25ca-40d6-a9c3-f96c65684874/studio-small-03-1k-128.exr",
+        "https://files.staging.peachworlds.com/website/ba232bfa-4637-47eb-8231-eb32113b3907/terrain-c.glb",
+        "https://files.staging.peachworlds.com/website/36470ee1-65fa-4d65-9b57-9be5a5d06825/booster-new-c.glb",
+        "https://files.staging.peachworlds.com/website/97611639-99ca-403a-82d5-968e954bfed9/rocket-fire-test3.glb",
+        "https://files.staging.peachworlds.com/website/2cb67a32-f6a9-46d5-b4d1-8c31138eac00/glow2.png",
+        "https://files.staging.peachworlds.com/website/325aabe5-1194-4542-9de5-c809b526f8c4/planebackground2.jpg",
+        "https://files.staging.peachworlds.com/website/bb9aa93b-316e-4798-b178-5cddb7139ae7/headphone-off.svg",
+        "https://files.staging.peachworlds.com/website/0ef99750-1629-4f3f-82c2-5bba7f469359/headphone-on.svg",
+        "/sceneState.json",
+        "/uiState.json",
+      ];
+      (function waterfallOptimizationScript() {
+        window._pwPreviewResourceUrls = window._pwPreviewResourceUrls || [];
+        window._pwResourceUrls = window._pwResourceUrls || [];
+        if (!window._pwLoadFileRequestsCache)
+          window._pwLoadFileRequestsCache = new Map();
+        if (!window._pwLoadFileResolveFnCache)
+          window._pwLoadFileResolveFnCache = new Map();
+        window._pwSetFileCache = (fileUrl, blob) => {
+          if (!window._pwLoadFileResolveFnCache)
+            throw new Error(
+              `Variable "_pwLoadFileResolveFnCache" is undefined.`
+            );
+          const blobUrl = (window.URL || window.webkitURL).createObjectURL(
+            blob
+          );
+          const resolveFn = window._pwLoadFileResolveFnCache.get(fileUrl);
+          if (!resolveFn)
+            throw new Error(
+              `Resolve function for file "${fileUrl}" not found.`
+            );
+          resolveFn(blobUrl);
+        };
+        window._pwWaitForExplicitFileResolve = (fileUrl) => {
+          if (!window._pwLoadFileResolveFnCache)
+            throw new Error(
+              `Variable "_pwLoadFileResolveFnCache" is undefined.`
+            );
+          if (!window._pwLoadFileRequestsCache)
+            throw new Error(
+              `Variable "_pwLoadFileRequestsCache" is undefined.`
+            );
+          if (
+            window._pwLoadFileResolveFnCache.has(fileUrl) &&
+            window._pwLoadFileRequestsCache.has(fileUrl)
+          )
+            return;
+          let resolveFn = void 0;
+          const explicitWaitPromise = new Promise((resolve) => {
+            resolveFn = resolve;
+          });
+          window._pwLoadFileResolveFnCache.set(fileUrl, resolveFn);
+          window._pwLoadFileRequestsCache.set(fileUrl, explicitWaitPromise);
+        };
+        window._pwLoadFileFromCacheHelper = async (fileUrl) => {
+          if (!fileUrl) return void 0;
+          try {
+            const response = await fetch(fileUrl);
+            if (!response.ok) return void 0;
+            const blob = await response.blob();
+            const blobUrl = (window.URL || window.webkitURL).createObjectURL(
+              blob
+            );
+            return blobUrl;
+          } catch (error) {
+            return void 0;
+          }
+        };
+        window._pwLoadFileFromCache = async (fileUrl) => {
+          if (!fileUrl) return void 0;
+          if (!window._pwLoadFileRequestsCache)
+            throw new Error(
+              `Variable "_pwLoadFileRequestsCache" is undefined.`
+            );
+          let requestPromise = window._pwLoadFileRequestsCache.get(fileUrl);
+          if (!requestPromise) {
+            if (!window._pwLoadFileFromCacheHelper)
+              throw new Error(
+                `Function "_pwLoadFileFromCacheHelper" is undefined.`
+              );
+            requestPromise = window._pwLoadFileFromCacheHelper(fileUrl);
+            window._pwLoadFileRequestsCache.set(fileUrl, requestPromise);
+          }
+          return await requestPromise;
+        };
+        for (const explicitResourceUrl of window._pwPreviewResourceUrls)
+          window._pwWaitForExplicitFileResolve(explicitResourceUrl);
+        for (const resourceUrl of window._pwResourceUrls)
+          window._pwLoadFileFromCache(resourceUrl);
+      })();
+    </script>
+
+    <script type="text/javascript">
+      window._pwExecLoadingPageJavascript = () => {
+        var items = document.querySelectorAll("#iek57");
+        for (var i = 0, len = items.length; i < len; i++) {
+          (function () {
+            const _this = this;
+            if (!_this || _this.dataset.gjsType) return;
+            const loadingDuration = 6e3;
+            const loadingStopAtTime = 4500;
+            if (!window._pwLoadingProgressEasing) {
+              window._pwLoadingProgressEasing = (x) => {
+                return x < 0.5
+                  ? 4 * x * x * x
+                  : 1 - Math.pow(-2 * x + 2, 3) / 2;
+              };
+            }
+            if (!window._pwSetLoadingProgress) {
+              window._pwSetLoadingProgress = (
+                timeMilliseconds,
+                progressText,
+                circle
+              ) => {
+                const progress = Math.round(
+                  window._pwLoadingProgressEasing(
+                    (timeMilliseconds + 50) / loadingDuration
+                  ) * 100
+                );
+                if (progressText) {
+                  progressText.dataset.time = `${timeMilliseconds}`;
+                  progressText.textContent = `${progress}%`;
+                }
+                if (!circle) return;
+                const radius = circle
+                  ? parseInt(circle.getAttribute("r") || "0")
+                  : 40;
+                const c = Math.PI * (radius * 2);
+                const circleProgress = ((100 - progress) / 100) * c;
+                circle.style.strokeDashoffset = `${circleProgress}`;
+              };
+            }
+            const timeId = setInterval(() => {
+              const progressText = Array.from(_this.children).find((el) =>
+                el.classList.contains("pwb-loading-bar-text")
+              );
+              const circle = _this.querySelector(`.pwb-loading-bar-circle`);
+              const currentProgress = parseInt(
+                progressText.dataset.time || "0"
+              );
+              window._pwSetLoadingProgress(
+                currentProgress + 50,
+                progressText,
+                circle
+              );
+              if (currentProgress >= loadingStopAtTime) {
+                clearInterval(timeId);
+              }
+            }, 50);
+          }).bind(items[i])();
+        }
+      };
+      window._pwExecLoadingPageJavascript();
+    </script>
+  </body>
+</html>

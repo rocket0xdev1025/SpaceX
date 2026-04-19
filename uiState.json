@@ -1,0 +1,303 @@
+{
+  "devices": {
+    "mobile": {
+      "canvases": {
+        "imaj": { "cameraId": "87a7c8ad-bea0-4735-8e26-72784d9d8498" }
+      }
+    },
+    "tablet": {},
+    "desktop": {
+      "canvases": {
+        "imaj": { "cameraId": "362c4cb3-233b-4c23-9d3d-e27ea69de48e" }
+      }
+    }
+  },
+  "sections": {
+    "i4yrui": { "name": "9-1", "offsetY": 0, "hash": "9-1" },
+    "i86poi": { "name": "7", "offsetY": 0, "hash": "7" },
+    "i9ukr8": { "name": "6", "offsetY": 0, "hash": "6" },
+    "ihd0q9": { "name": "8", "offsetY": 0, "hash": "8" },
+    "iqvgp5": { "name": "9", "offsetY": 0, "hash": "9" },
+    "iv4epl": { "name": "5", "offsetY": 0, "hash": "5" },
+    "iwgzof": { "name": "FIN", "offsetY": 0, "hash": "fin" },
+    "iyuyew": { "name": "1", "offsetY": 0, "hash": "1" },
+    "i4yrui-2": { "name": "9-1-2", "offsetY": 0, "hash": "9-1-2" },
+    "iqvgp5-2": { "name": "9-2", "offsetY": 0, "hash": "9-2" },
+    "igwjo-2-2": { "name": "2", "offsetY": 0, "hash": "2" },
+    "iqvgp5-2-2": { "name": "9-3", "offsetY": 0, "hash": "9-3" },
+    "igwjo-2-2-2": { "name": "3", "offsetY": 0, "hash": "3" },
+    "iqvgp5-2-2-2": { "name": "9-4", "offsetY": 0, "hash": "9-4" }
+  },
+  "links": {
+    "i5mhzj": {
+      "url": "https://www.spacex.com/",
+      "type": "external",
+      "newTab": true
+    },
+    "i8doo4": {
+      "url": "https://x.com/MissionMarsETH",
+      "type": "external",
+      "newTab": true
+    },
+    "i5mhzj-2": {
+      "url": "https://peachworlds.com",
+      "type": "external",
+      "newTab": true
+    }
+  },
+  "scrollAnimations": {
+    "iukcp": {
+      "type": "section",
+      "effectA": "fade",
+      "effectB": "fade",
+      "sectionId": "iyuyew"
+    },
+    "iwcuc": {
+      "type": "section",
+      "effectA": "fade",
+      "effectB": "fade",
+      "sectionId": "igwjo-2-2-2"
+    },
+    "iy3r1": {
+      "type": "section",
+      "effectA": "fade",
+      "effectB": "fade",
+      "sectionId": "igwjo-2-2"
+    },
+    "i19vou": {
+      "type": "section",
+      "effectA": "fade",
+      "effectB": "fade",
+      "sectionId": "iqvgp5"
+    },
+    "i3lxrg": {
+      "type": "section",
+      "effectA": "fade",
+      "effectB": "fade",
+      "sectionId": "iqvgp5-2-2-2"
+    },
+    "i3r8u6": {
+      "type": "section",
+      "effectA": "fade",
+      "effectB": "fade",
+      "sectionId": "i4yrui"
+    },
+    "i4q4t8": {
+      "type": "section",
+      "effectA": "fade",
+      "effectB": "fade",
+      "sectionId": "i4yrui"
+    },
+    "i6hvl7": {
+      "type": "section",
+      "effectA": "fade",
+      "effectB": "fade",
+      "sectionId": "ihd0q9"
+    },
+    "i7k6y6": {
+      "type": "section",
+      "effectA": "fade",
+      "effectB": "fade",
+      "sectionId": "iqvgp5-2-2"
+    },
+    "ibs5m2": {
+      "type": "section",
+      "effectA": "fade",
+      "effectB": "fade",
+      "sectionId": "i4yrui"
+    },
+    "iddy9b": {
+      "type": "section",
+      "effectA": "fade",
+      "effectB": "fade",
+      "sectionId": "iv4epl"
+    },
+    "igdj8a": {
+      "type": "section",
+      "effectA": "fade",
+      "effectB": "fade",
+      "sectionId": "iwgzof"
+    },
+    "ihuxg9": {
+      "type": "section",
+      "effectA": {
+        "keyframe": { "offsetY": 30, "opacity": 0 },
+        "transition": { "type": "easeOut" }
+      },
+      "effectB": {
+        "keyframe": { "offsetY": -30, "opacity": 0 },
+        "transition": { "type": "easeOut" }
+      },
+      "sectionId": "i9ukr8"
+    },
+    "iiiukl": {
+      "type": "section",
+      "effectA": {
+        "keyframe": { "offsetY": 30, "opacity": 0 },
+        "transition": { "type": "easeOut" }
+      },
+      "effectB": {
+        "keyframe": { "offsetY": -30, "opacity": 0 },
+        "transition": { "type": "easeOut" }
+      },
+      "sectionId": "ihd0q9"
+    },
+    "iikpoi": {
+      "type": "section",
+      "effectA": "fade",
+      "effectB": "fade",
+      "sectionId": "iqvgp5"
+    },
+    "iktmyi": {
+      "type": "section",
+      "effectA": "fade",
+      "effectB": "fade",
+      "sectionId": "i9ukr8"
+    },
+    "im8oly": {
+      "type": "section",
+      "effectA": {
+        "keyframe": { "offsetY": 30, "opacity": 0 },
+        "transition": { "type": "easeOut" }
+      },
+      "effectB": {
+        "keyframe": { "offsetY": -30, "opacity": 0 },
+        "transition": { "type": "easeOut" }
+      },
+      "sectionId": "i4yrui"
+    },
+    "ioaeno": {
+      "type": "section",
+      "effectA": "fade",
+      "effectB": "fade",
+      "sectionId": "iqvgp5-2"
+    },
+    "iorqun": {
+      "type": "section",
+      "effectA": "fade",
+      "effectB": "fade",
+      "sectionId": "i86poi"
+    },
+    "itfsmh": {
+      "type": "section",
+      "effectA": {
+        "keyframe": { "offsetY": 30, "opacity": 0 },
+        "transition": { "type": "easeOut" }
+      },
+      "effectB": {
+        "keyframe": { "offsetY": -30, "opacity": 0 },
+        "transition": { "type": "easeOut" }
+      },
+      "sectionId": "i9ukr8"
+    },
+    "iumy5f": {
+      "type": "section",
+      "effectA": "fade",
+      "effectB": "fade",
+      "sectionId": "iqvgp5-2-2"
+    },
+    "iyvhvk": {
+      "type": "section",
+      "effectA": "fade",
+      "effectB": "fade",
+      "sectionId": "iqvgp5"
+    },
+    "i3r8u6-2": {
+      "type": "section",
+      "effectA": "fade",
+      "effectB": "fade",
+      "sectionId": "iqvgp5-2"
+    },
+    "im8oly-2": {
+      "type": "section",
+      "effectA": {
+        "keyframe": { "offsetY": 30, "opacity": 0 },
+        "transition": { "type": "easeOut" }
+      },
+      "effectB": {
+        "keyframe": { "offsetY": -30, "opacity": 0 },
+        "transition": { "type": "easeOut" }
+      },
+      "sectionId": "iqvgp5-2"
+    },
+    "i3r8u6-2-2": {
+      "type": "section",
+      "effectA": "fade",
+      "effectB": "fade",
+      "sectionId": "iqvgp5-2-2"
+    },
+    "im8oly-2-2": {
+      "type": "section",
+      "effectA": {
+        "keyframe": { "offsetY": 30, "opacity": 0 },
+        "transition": { "type": "easeOut" }
+      },
+      "effectB": {
+        "keyframe": { "offsetY": -30, "opacity": 0 },
+        "transition": { "type": "easeOut" }
+      },
+      "sectionId": "iqvgp5-2-2"
+    },
+    "i3r8u6-2-2-2": {
+      "type": "section",
+      "effectA": "fade",
+      "effectB": "fade",
+      "sectionId": "iqvgp5-2-2-2"
+    },
+    "im8oly-2-2-2-2": {
+      "type": "section",
+      "effectA": {
+        "keyframe": { "offsetY": 30, "opacity": 0 },
+        "transition": { "type": "easeOut" }
+      },
+      "effectB": {
+        "keyframe": { "offsetY": -30, "opacity": 0 },
+        "transition": { "type": "easeOut" }
+      },
+      "sectionId": "iqvgp5-2-2-2"
+    }
+  },
+  "audio": {
+    "i8g04": {
+      "src": "https://files.staging.peachworlds.com/website/3ea21a7c-86d6-45db-897d-5c8b745de87c/es-the-vision-sonum-1-.mp3",
+      "loop": true,
+      "volume": 0.2,
+      "onLeave": "pause",
+      "autoplay": true,
+      "progress": 0.3,
+      "sourceType": "upload"
+    }
+  },
+  "audioStyle": {
+    "i8g04": {
+      "playCursor": "pointer",
+      "iconPlayUrl": "https://files.staging.peachworlds.com/website/bb9aa93b-316e-4798-b178-5cddb7139ae7/headphone-off.svg",
+      "iconPauseUrl": "https://files.staging.peachworlds.com/website/0ef99750-1629-4f3f-82c2-5bba7f469359/headphone-on.svg",
+      "playIconType": "custom",
+      "playIconColor": "#ffffff"
+    }
+  },
+  "interactions": {
+    "i5mhzj": [
+      {
+        "actions": [{ "id": "i8g04", "type": "uiAudio", "event": "play" }],
+        "mouseCursor": "pointer",
+        "triggerType": "mouseClick"
+      }
+    ],
+    "i9npw-3": [
+      {
+        "actions": [{ "id": "i8g04", "type": "uiAudio", "event": "play" }],
+        "mouseCursor": "pointer",
+        "triggerType": "mouseClick"
+      }
+    ],
+    "i5mhzj-2": [
+      {
+        "actions": [{ "id": "i8g04", "type": "uiAudio", "event": "play" }],
+        "mouseCursor": "pointer",
+        "triggerType": "mouseClick"
+      }
+    ]
+  }
+}
